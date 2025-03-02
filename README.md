@@ -19,28 +19,41 @@ Este projeto é uma API desenvolvida com **Fastify, Zod, Redis e Drizzle ORM** p
 ## 📂 Estrutura do Projeto
 
 ```plaintext
-📦 src/
- ├── 📜 env.ts                # Configuração de variáveis de ambiente
- ├── 📂 functions/            # Funções auxiliares para a API
- │   ├── 🔗 acess-invite-link.ts
- │   ├── 📊 get-ranking.ts
- │   ├── 🎯 get-subscriber-invite-clicks.ts
- │   ├── 🔢 get-subscriber-invite-count.ts
- │   ├── 🏆 get-subscriber-ranking-position.ts
- │   ├── 🎟 subscribe-to-event.ts
- ├── 📂 redis/                # Configuração do Redis
- │   ├── 🛠 client.ts
- ├── 📂 routes/               # Definição das rotas da API
- │   ├── 🔗 acess-invite-link.ts
- │   ├── 📊 get-ranking.ts
- │   ├── 🎯 get-subscriber-invite-clicks.ts
- │   ├── 🔢 get-subscriber-invite-count.ts
- │   ├── 🏆 get-subscriber-ranking-position.ts
- │   ├── 🎟 subscribe-to-event.ts
- ├── 📂 drizzle/              # Configuração do banco de dados
- │   ├── 🛢 client.ts
- │   ├── 📜 schema/
- │   │   ├── 📝 subscriptions.ts
+├── dist/                      # Arquivos compilados
+├── node_modules/              # Dependências do projeto
+├── routes/                    # Definição das rotas da API
+│   ├── acess-invite-link-route.ts
+│   ├── get-ranking-route.ts
+│   ├── get-subscriber-invite-clicks-route.ts
+│   ├── get-subscriber-invite-count-route.ts
+│   ├── get-subscriber-ranking-position-route.ts
+│   ├── subscribe-to-event-route.ts
+├── src/                       # Código fonte
+│   ├── drizzle/               # Configuração do banco de dados
+│   │   ├── migrations/        # Migrações do banco
+│   │   ├── schema/            # Definição dos schemas
+│   │   ├── client.ts
+│   │   ├── functions/        # Funções auxiliares para a API
+│   │   ├── acess-invite-link.ts
+│   │   ├── get-ranking.ts
+│   │   ├── get-subscriber-invite-clicks.ts
+│   │   ├── get-subscriber-invite-count.ts
+│   │   ├── get-subscriber-ranking-position.ts
+│   │   ├── subscribe-to-event.ts
+│   ├── redis/                # Configuração do Redis
+│   │   ├── client.ts
+│   │   ├── env.ts
+│   │   ├── server.ts
+├── .env                       # Variáveis de ambiente
+├── .gitignore                 # Arquivos ignorados pelo Git
+├── api.http                   # Testes de API HTTP
+├── biome.json                 # Configuração do Biome
+├── docker-compose.yml         # Configuração do Docker Compose
+├── drizzle.config.ts          # Configuração do Drizzle ORM
+├── package.json               # Configuração do Node.js
+├── package-lock.json          # Dependências travadas
+├── tsconfig.json              # Configuração do TypeScript
+├── tsup.config.ts             # Configuração do TSUP (bundler)
 ```
 
 ---
